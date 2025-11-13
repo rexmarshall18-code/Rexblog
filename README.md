@@ -62,7 +62,7 @@ Tech Stack
 
 Clone Repo:
 
-git clone [https://github.com/username-anda/rexblog.git](https://github.com/rexmarshall18-code/rexblog.git)
+git clone [https://github.com/rexmarshall18-code/rexblog.git](https://github.com/rexmarshall18-code/rexblog.git)
 cd rexblog
 
 Database:

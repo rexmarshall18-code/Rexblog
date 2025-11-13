@@ -1,0 +1,3 @@
+# Abaikan file konfigurasi yang berisi rahasia/password
+config.php
+```

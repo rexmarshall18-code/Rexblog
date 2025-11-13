@@ -4,7 +4,6 @@ require "config.php";
 session_start();
 
 
-
 if (isset($_SESSION['user_id'])) {
     header("Location: dashboard.php");
     exit;
@@ -140,9 +139,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <button name="submit" class="w-100 btn btn-lg btn-primary mb-3" type="submit">Create account</button>
     <h6 class="text-center mb-3">Already have an account? <a href="login.php">Sign in</a></h6>
     
+    
     <div class="text-center mt-3">
       <div id="g_id_onload"
-           <!-- PERBAIKAN: Menggunakan variabel dari config.php -->
            data-client_id="<?= htmlspecialchars($google_client_id) ?>"
            data-callback="handleCredentialResponse"
            data-auto_prompt="false">

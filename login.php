@@ -1,11 +1,8 @@
 <?php
-require "config.php"; // <-- Memuat config di baris pertama
+require "config.php";
 
 session_start();
 
-// 'ini_set' dan 'error_reporting' sudah ada di config.php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
 
 if (isset($_SESSION['user_id'])) { 
     header("Location: dashboard.php");
@@ -70,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="index.php">
-            <img src="LogoREXBLOG.jpg" alt="REXBLOG Logo">
+            <img src="LogoREXBLOG.jpg" alt="REXBLOG Logo"> 
         </a>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -116,9 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <button name="submit" class="w-100 btn btn-lg btn-primary mb-3" type="submit">Sign in</button>
     <h6 class="text-center mb-3">Don't have an account? <a href="register.php">Create your account</a></h6>
     
+    
     <div class="text-center mt-3">
       <div id="g_id_onload"
-           <!-- PERBAIKAN: Menggunakan variabel dari config.php -->
            data-client_id="<?= htmlspecialchars($google_client_id) ?>"
            data-callback="handleCredentialResponse"
            data-auto_prompt="false">
